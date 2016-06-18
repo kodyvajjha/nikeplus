@@ -142,9 +142,9 @@ def decode_activity(activity):
 
 
 def get_activities(access_token, start_date=None):
-    base_url = 'https://api.nike.com/v1'
+    base_url = 'https://api.nike.com'
 
-    url = '/me/sport/activities?access_token=%s&count=500' % access_token
+    url = '/v1/me/sport/activities?access_token=%s' % access_token
 
     if start_date is not None:
         # FIXME: use re module to assert that it's yyyy-mm-dd
